@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -43,6 +43,7 @@ namespace Asp_Core_Test.Models
 
         [Required(ErrorMessage = "Please select your subject")]
         public Guid PhdSubjectId { get; set; }
+        
         [ForeignKey("PhdSubjectId")]
         public virtual PhdSubject phdSubject { get; set; }
     }
