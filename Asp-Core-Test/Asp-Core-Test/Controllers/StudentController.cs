@@ -43,8 +43,7 @@ namespace Asp_Core_Test.Controllers
 
         #region "To save student details."
         //Get specific student detail, if availabe else return empty.
-        [Route("Save/{id?}")]
-        [HttpGet]
+        [HttpGet,Route("Save/{id?}")]
         public IActionResult Save(Guid? id)
         {
             var newStudent = _studentRepository.GetStudent(id);
