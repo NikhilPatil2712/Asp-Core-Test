@@ -1,4 +1,4 @@
-﻿using Asp_Core_Test.Models;
+using Asp_Core_Test.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -49,19 +49,16 @@ namespace Asp_Core_Test.Controllers
 
         #region "To get subject details by id."
         //Get details of subject by given id. 
-        [Route("Details/{id?}")]
-        [HttpGet]
+        [Route("Details/{id?}"),HttpGet]
         public IActionResult Details(Guid id) => View(_phdRepository.GetSubject(id));
         #endregion
 
         #region "Delete subject"
         //Delete the subject from database.
-        [Route("Delete/{id?}")]
-        [HttpGet]
+        [Route("Delete/{id?}"),HttpGet]
         public IActionResult Delete(Guid? id) => View(_phdRepository.GetSubject(id));
 
-        [Route("Delete/{id?}")]
-        [HttpPost]
+        [Route("Delete/{id?}"),HttpPost]
         public IActionResult Delete(Guid id)
         {
             _phdRepository.DeleteSubject(id);
