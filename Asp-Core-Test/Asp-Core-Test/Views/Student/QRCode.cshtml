@@ -1,4 +1,5 @@
-﻿@model Asp_Core_Test.Models.Student
+@model Asp_Core_Test.Models.Student
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -21,68 +22,44 @@
                 </div>
                 <div class="col-md-8 my-4">
                     <dl class="row">
-                        <dt class="col-sm-4">
-                            First Name
-                        </dt>
+                        <dt class="col-sm-4">First Name</dt>
                         <dd class="col-sm-8 text-capitalize">
                             @Html.DisplayFor(model => model.FirstName)
                         </dd>
-                        <dt class="col-sm-4">
-                            Last Name
-                        </dt>
+                        <dt class="col-sm-4">Last Name</dt>
                         <dd class="col-sm-8 text-capitalize">
                             @Html.DisplayFor(model => model.LastName)
                         </dd>
-                        <dt class="col-sm-4">
-                            Email
-                        </dt>
+                        <dt class="col-sm-4">Email</dt>
                         <dd class="col-sm-8">
                             @Html.DisplayFor(model => model.Email)
                         </dd>
-                        <dt class="col-sm-4">
-                            Address
-                        </dt>
+                        <dt class="col-sm-4">Address</dt>
                         <dd class="col-sm-8">
                             @Html.DisplayFor(model => model.Address)
                         </dd>
-                        <dt class="col-sm-4">
-                            Contact
-                        </dt>
+                        <dt class="col-sm-4">Contact</dt>
                         <dd class="col-sm-8">
                             @Html.DisplayFor(model => model.Contact)
                         </dd>
+                        <dt class="col-sm-4">Gender</dt>
                         @if (Model.Gender == "m")
                         {
-                            <dt class="col-sm-4">
-                                Gender
-                            </dt>
-                            <dd class="col-sm-8">
-                                Male
-                            </dd>
+                            <dd class="col-sm-8">Male</dd>
                         }
                         else
                         {
-                            <dt class="col-sm-4">
-                                Gender
-                            </dt>
-                            <dd class="col-sm-8">
-                                Female
-                            </dd>
+                            <dd class="col-sm-8">Female</dd>
                         }
-                        <dt class="col-sm-4">
-                            Education Year
-                        </dt>
+                        <dt class="col-sm-4">Education Year</dt>
                         <dd class="col-sm-8">
                             @Html.DisplayFor(model => model.Year)
                         </dd>
-                        <dt class="col-sm-4">
-                            Phd Subject
-                        </dt>
+                        <dt class="col-sm-4">Phd Subject</dt>
                         <dd class="col-sm-8">
                             @Html.DisplayFor(model => model.phdSubject.Name)
                         </dd>
                     </dl>
-
                 </div>
             </div>
             <div class="row">
