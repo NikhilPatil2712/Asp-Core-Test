@@ -28,8 +28,7 @@ namespace Asp_Core_Test.Controllers
 
         #region "List student deatls."
         //List all student and show search result
-        [Route("/")]
-        [Route("Index")]
+        [Route("/"),Route("Index")]
         public IActionResult Index(string search = null)
         {
             if (!string.IsNullOrEmpty(search))
